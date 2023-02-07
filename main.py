@@ -39,12 +39,8 @@ def verificaVitoriaRato():
 
     # verifica se o rato(computador) venceu por um deles chegar do outro lado
 
-    vitoria_rato = [tabuleiro[7][0], tabuleiro[7][1],
-                    tabuleiro[7][2], tabuleiro[7][3],
-                    tabuleiro[7][4], tabuleiro[7][5], tabuleiro[7][6], tabuleiro[7][7], ]
-
-    for i in vitoria_rato:
-        if i == 1:
+    for i in range(8):
+        if tabuleiro[7][i] == 1:
             return True
 
     # verifica se o rato(computador) venceu por ter eliminado o gato
