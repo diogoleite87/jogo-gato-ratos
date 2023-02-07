@@ -1,9 +1,5 @@
-from math import inf as infinity
-from random import choice
-import platform
-import time
-from os import system
 import re
+import copy
 
 HUMANO = -1
 COMPUTADOR = +1
@@ -75,7 +71,7 @@ def movimentaGato():
 
     # mostra as possiveis movimentaçoes do gato
 
-    tabuleiro_movimentacao = tabuleiro
+    tabuleiro_movimentacao = copy.deepcopy(tabuleiro)
     movimentos_possiveis = []
     contador_movimentos = 0
     movimento_valido = False
@@ -199,7 +195,7 @@ def movimentaGato():
 def main():
 
     while(True):
-        imprimeTabuleiro()
+        # imprimeTabuleiro()
         movimentaGato()
 
 
