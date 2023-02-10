@@ -169,12 +169,14 @@ def movimentaGato():
             else:
                 print('|', tabuleiro_movimentacao[i][j], '|', end='')
 
+    print('\n--------------------------------------------------------------------------------')
+
     while(movimento_valido == False):
 
         movimento_posicao = []
 
         movimento = input(
-            '\n\nLegenda:\n\nKR: Killer Rato;\nMG: Movimenta Gato. \n\nInsira o numero do movimento que deseja fazer com o gato:\n --->  ')
+            '\n\nLegenda:\n\nMR: Matar Rato;\nMG: Movimenta Gato. \n\nInsira o numero do movimento que deseja fazer com o gato:\n --->  ')
 
         for i in range(len(movimentos_possiveis)):
             aux = movimentos_possiveis[i][0]
